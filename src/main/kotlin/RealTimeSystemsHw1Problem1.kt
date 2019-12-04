@@ -18,7 +18,7 @@ FeasibilityAnalysis:
 ${wcrt.map { (t, r) -> "wcrt of task $t = ${r} (${if (r < t.D) "" else "NOT "}feasible as wcrt <= deadline ($r < ${t.D}) for the task)" }.joinToString("\n")}
 
 ${if (isFeasible) "Since all tasks wcrt meet their deadline, this task set is feasible." else "This task set is NOT feasible since one or more tasks fail to meet their deadline."}
-        """.trimIndent()
+""".trimIndent()
     }
 }
 
